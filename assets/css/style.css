@@ -7,15 +7,40 @@
     text-decoration: none;
     list-style: none;
 }
-body{
-    background: linear-gradient(90deg, rgba(75,108,183,1) 22%, rgba(24,40,72,1) 83%);
+/* Add this to your existing CSS file or create a new one */
+
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --second-bg-color: #11206ee6;
+    --text-color: #fff;
+    --main-color: #4baad3;
+    --second-color: #ccc;
+    --big-font: 5rem;
+    --h2-font: 2.5rem;
+    --p-font: 1.3rem;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(75, 108, 183, 1) 22%, rgba(24, 40, 72, 1) 83%);
     overflow: hidden;
 }
-.header{
+
+.header {
     position: fixed;
     width: 100%;
-    padding: 40px 60px;
+    padding: 20px;
 }
+
 .navigation{
     display: flex;
     align-items: center;
@@ -87,52 +112,48 @@ body{
 .navigation ul li a:hover{
     border-bottom: 3px solid #fff;
 }
-.main{
+
+.main {
     overflow: hidden;
 }
-.section{
-    padding: 10rem;
-    height: 100vh;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.left{
+.section {
+    padding: 5rem 1rem; /* Adjust padding for smaller screens */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
-.left p{
-    font-size: 1.5rem;
-    color: #fff;
+
+.left,
+.right {
+    text-align: center;
+}
+
+.left p {
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
-.left h4{
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 3rem;
+
+.left h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
-.btn{
-    padding: 1.5rem 5rem;
-    background: #102aabe6;
-    border-radius: 15px;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 700;
-    transition: all 0.3s ease;
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
 }
-.btn:hover{
-    box-shadow: 0 1px 4px #1c683f;
-}
-.right img{
-    width: 500px;
+
+.right img {
+    width: 100%;
+    max-width: 300px; /* Adjust max-width for smaller screens */
     margin-bottom: 1rem;
     animation: float 1.8s infinite alternate;
 }
-.shadow{
-    width: 450px;
-    height: 45px;
+
+.shadow {
+    width: 100%;
+    max-width: 250px; /* Adjust max-width for smaller screens */
+    height: 30px;
     background: hsla(38, 21%, 19%, .16);
     border-radius: 50%;
     margin: 0 auto;
@@ -140,223 +161,45 @@ body{
     animation: shadow 1.8s infinite alternate;
 }
 
-footer { /* priemro rodapé */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: transparent;
-    height: auto;
-    width: 100vw;
-    font-family: "Open Sans";
-    border-bottom: -200px;
-    color: #fffffe;
-}
-.footer-principal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.socials { /* icones das redes sociais */
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 0 3rem 0;
-}
-.socials li {
-    margin: 0 10px;
-}
-.socials a {
-    text-decoration: none;
-    color: #fffffe;
-}
-.socials a i {
-    font-size: 1.1rem;
-    transition: color .4s ease;
-
-}
-.socials a:hover i {
-    color: rgb(60, 84, 151);
-}
-
-.footer-final { /* segundo rodapé */
-    background: #171e3144;
-    width: 100vw;
-    padding: 8px 0;
-    text-align: center;
-}
-.footer-final p {
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-.footer-final span {
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-}
-
-:root{
-
- --second-bg-color : #11206ee6;
- --text-color: #fff;
- --main-color:#4baad3;
- --second-color:#ccc;
- --big-font: 5rem;
- --h2-font: 2.5rem;
- --p-font: 1.3rem;
-}
-
-
-.container-0{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-0 div{
-    border-radius: 5px;
-    box-shadow: 5px, 5px 10px 0px rgba(50, 50, 50, 0.22);
-    padding: 30px;
-    margin: 20px;
-    width: 400px;
-    transition: all 0.3s ease-out;
-    background-color: var(--second-bg-color);
-}
-
-.container-0 div:hover{
-    transform: translateY(-5px);
-    cursor: pointer;
-}
-
-.container-0 div h2{
-    
-    font-weight: 700;
-    margin: 0 0 10px;
-}
-
-.container-0 div p{
-   
-    font-weight: 500;
-    margin: 0 0 20px;
-}
-
-h1.center{
-    text-align: center;
-    margin: 0 0 20px;
-}
-
-.video-game{
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-.filmes{
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-.futebol{
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-@media (max-width: 500px){
-    header{
-        padding: 20px 5%;
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 20px;
     }
-    .logo{
-        font-size: 30px;
-        display: none;
+
+    .navigation ul {
+        flex-direction: row;
     }
-    .navegacao{
-        display: none;
+
+    .navigation ul li {
+        margin-bottom: 0;
+        margin-right: 10px;
     }
-    .texto-home h1{
-        font-size: 2.5rem;
-    }
-    .texto-home p{
-        font-size: 16px;
-    }
-    .btn{
-        font-size: 16px;
-    }
-    .container div{
-        width: 300px;
-    }
-    .video-game{
-        width: 200px;
-    }
-    .filmes{
-        width: 200px;
-    }
-    .futebol{
-        width: 200px;
-    }
-    section{
-        padding: 100px 20px;
-    }
-    .sobre{
-        padding: 50px 0;
-    }
-    #sobre{
-        font-size: 16px;
-    }
-    .projetos{
+
+    .left,
+    .right {
         width: 100%;
+        text-align: center;
     }
-    .container{
-        flex-direction: column;
+
+    .section {
+        padding: 2rem 1rem;
     }
-    .container div{
-        margin: 20px 0;
+
+    .left h4 {
+        font-size: 1.5rem;
     }
-    footer{
-        flex-direction: row;
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
     }
-    .redes-sociais{
-        flex-direction: row;
+
+    .right img {
+        max-width: 100%;
+        margin-bottom: 1rem;
     }
-    .redes-sociais a{
-        font-size: 16px;
-    }
-}
-@keyframes float{
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(15px);
-    }
-}
-@keyframes shadow{
-    0%{
-        transform: scale(1.1);
-    }
-    100%{
-        transform: scale(.85,.85);
+
+    .shadow {
+        max-width: 100%;
     }
 }
